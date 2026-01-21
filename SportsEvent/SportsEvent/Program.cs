@@ -53,6 +53,7 @@ namespace SportsEvent
             return (sum-(Highest(tomb)+Lowest(tomb)))/6;
 
         }
+
         /// &lt;summary&gt;
         /// This method prints a summary report which includes the original
         //list of
