@@ -30,7 +30,7 @@ namespace SportsEvent
         /// &lt;returns&gt;The lowest score in scores&lt;/returns&gt;
         public double Lowest(double[] tomb)
         {
-            int low = tomb[0];
+            double low = tomb[0];
             foreach (double elem in tomb) { 
                 if (elem < low)
                 {
@@ -45,7 +45,7 @@ namespace SportsEvent
         /// &lt;returns&gt;The highest score in scores&lt;/returns&gt;
         public double Highest(double[] tomb)
         {
-            int high = tomb[0];
+            double high = tomb[0];
             foreach (double elem in tomb)
             {
                 if (elem > high)
