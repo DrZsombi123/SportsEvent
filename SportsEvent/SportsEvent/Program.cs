@@ -53,12 +53,20 @@ namespace SportsEvent
         /// thrown out.
         /// &lt;/summary&gt;
         /// &lt;returns&gt;The average&lt;/returns&gt;
-        public double Average()
+        public double Average(double[] tomb)
         {
-            // TODO : Calculate the average without lowest and highest score
+            double sum = 0;
 
-            return 0;
+            
+            
+            foreach (double elem in tomb)
+            {
+             sum += elem;   
+            }
+            return (sum-(Highest(tomb)+Lowest(tomb)))/6;
+
         }
+
         /// &lt;summary&gt;
         /// This method prints a summary report which includes the original
         //list of
