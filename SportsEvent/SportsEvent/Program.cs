@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Transactions;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace SportsEvent
@@ -15,7 +16,13 @@ namespace SportsEvent
         /// &lt;/summary&gt;
         public void ReadScores()
         {
-            // TODO : Implement reading 8 scores from the user
+            Console.WriteLine("Enter Eight Contestant Scores:");
+            for (int i = 0; i < scores.Length; i++)
+            {
+                Console.Write($"Judge {i+1} --> ");
+                double score = Convert.ToDouble(Console.ReadLine());
+                scores[i] = score;
+            }
         }
         /// &lt;summary&gt;
         /// Determines which score in scores is the lowest
