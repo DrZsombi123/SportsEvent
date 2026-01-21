@@ -83,7 +83,7 @@ namespace SportsEvent
 public void PrintSummary()
         {
             Console.WriteLine("Summary Report".PadLeft(20));
-            Console.WriteLine("-".PadLeft(30), ".-");
+            Console.WriteLine("-".PadLeft(30,'-'));
             for (int i = 0; i < scores.Length; i++) {
                 Console.Write($"{scores[i]} ");
             }
