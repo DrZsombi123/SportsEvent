@@ -8,7 +8,7 @@ namespace SportsEvent
 
     public class SportsEvent
     {
-        private double[] scores = new double[8];
+        public double[] scores = new double[8];
         /// &lt;summary&gt;
         /// This method prompts the user to enter in 8 scores and stores
         /// them in the array scores.
@@ -67,7 +67,15 @@ namespace SportsEvent
     /// &lt;/summary&gt;
 public void PrintSummary()
         {
-            // TODO : Print summary report
+            Console.WriteLine("Summary Report".PadLeft(20));
+            Console.WriteLine("-".PadLeft(30), ".-");
+            for (int i = 0; i < scores.Length; i++) {
+                Console.Write($"{scores[i]} ");
+            }
+            Console.WriteLine($"Lowest Score = {Lowest(scores)}");
+            Console.WriteLine($"Highest Score = {Highest(scores)}");
+            Console.WriteLine($"Average Score = {Average(scores)}");
+
         }
         /// &lt;summary&gt;
         /// Program entry point.
