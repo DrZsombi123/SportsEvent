@@ -21,19 +21,32 @@ namespace SportsEvent
         /// Determines which score in scores is the lowest
         /// &lt;/summary&gt;
         /// &lt;returns&gt;The lowest score in scores&lt;/returns&gt;
-        public double Lowest()
+        public double Lowest(double[] tomb)
         {
-            // TODO : Determine the lowest score
-            return 0;
+            int low = tomb[0];
+            foreach (double elem in tomb) { 
+                if (elem < low)
+                {
+                    low = elem;
+                }
+            }
+            return low;
         }
         /// &lt;summary&gt;
         /// Determines which score in scores is the highest
         /// &lt;/summary&gt;
         /// &lt;returns&gt;The highest score in scores&lt;/returns&gt;
-        public double Highest()
+        public double Highest(double[] tomb)
         {
-            // TODO : Determine the highest score
-            return 0;
+            int high = tomb[0];
+            foreach (double elem in tomb)
+            {
+                if (elem > high)
+                {
+                    high = elem;
+                }
+            }
+            return high;
         }
         /// &lt;summary&gt;
         /// Calculates the average of scores with the lowest and highest scores
@@ -64,6 +77,7 @@ public void PrintSummary()
         {
             SportsEvent app = new SportsEvent();
             app.ReadScores();
+            
             app.PrintSummary();
         }
     }
